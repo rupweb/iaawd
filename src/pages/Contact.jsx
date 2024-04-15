@@ -48,7 +48,8 @@ const ContactPage = () => {
                     <p>
                         Email: <a href="mailto:rupert@webstersystems.co.uk">rupert@webstersystems.co.uk</a>
                     </p>
-
+                    <p>Did you ever work so much as 1 day in agriculture?</p>
+                    <p>Did you ever suffer a disability?</p>
                     <br/>
                     <form id="theForm" onSubmit={handleSubmit}>
                         <div>
