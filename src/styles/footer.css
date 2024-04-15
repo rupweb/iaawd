@@ -1,0 +1,17 @@
+.sign-petition-link {
+    color: green;
+    font-size: 2em; /* Current size */
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 1200px) {
+    .sign-petition-link {
+        font-size: 1.5em;
+    }
+
+    .text-muted {
+        font-size: 0.75em;
+    }
+}

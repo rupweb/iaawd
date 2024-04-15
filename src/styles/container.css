@@ -1,0 +1,66 @@
+.header-container {
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center content inside container */
+}
+
+.hero-container {
+    padding-top: 20px;
+    width: 100%;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.custom-container {
+  max-height: none;
+}
+
+.children-container {
+  margin-left: 20%; /* Centers container */
+  margin-right: 20%; /* Centers container */
+  margin-bottom: 40px; /* Space between tables */
+  outline: 1px solid green; /* outline */
+  padding-top: 20px; /* Space between tables */
+  padding-bottom: 20px; /* Space between tables */
+}
+
+.footer-container {
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center content inside container */
+}
+
+@media (max-width: 1200px) {
+
+  .children-container {
+    margin: 0;
+    padding: 1px; /* Small padding for mobile view */
+  }
+  .custom-container {
+    margin: 0;
+    padding: 1px; /* Small padding for mobile view */
+  }
+  .footer-container {
+    margin: 0;
+    padding: 1px; /* Small padding for mobile view */
+  }
+
+  .container {
+    padding: 1px;
+  }
+  .header, .footer {
+    font-size: 1px;
+  }
+}
+
+/* Debugging
+.header-container, .hero-container, .custom-container, .footer-container, .tables-container, .navbar {
+  outline: 1px solid red; 
+} */

@@ -1,0 +1,118 @@
+.navbar {
+  width: 59%;
+  margin: 0 auto; /* Center the navbar */
+  display: flex;
+  justify-content: center; /* horizontally */
+  align-items: center; /* vertically */
+}
+
+.container-fluid-centered {
+  min-height: 100px;
+  width: 100%; /* Adjust width to desired size */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-column,
+.middle-column,
+.right-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-column {
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.left-column {
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.middle-column {
+  justify-content: center;
+  transform: translateY(-10%);
+}
+
+.form-switch {
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    width: 100%;
+    margin: 0 auto; /* Center the navbar */
+    display: flex;
+    justify-content: center; /* horizontally */
+    align-items: center; /* vertically */
+  }
+  
+  .container-fluid-centered {
+    width: 100%; /* Adjust width to desired size */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-column,
+  .middle-column,
+  .right-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right-column {
+    justify-content: flex-end;
+    padding-right: 5px;
+  }
+  
+  .left-column {
+    justify-content: flex-start;
+    padding-left: 5px;
+  }
+  
+  .middle-column {
+    justify-content: center;
+    transform: translateY(-2%); /* Reduce any transform */
+  }
+
+  /* Hamburger button */
+  .left-column .btn {
+    font-size: 12px;
+  }
+
+  .left-column .btn .bi-list {
+    font-size: 10px;
+  }
+
+  .dark-logo, .light-logo {
+    width: 150px; /* Adjust width */
+    height: 100%; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+  }
+
+  .right-column input#darkModeSwitch {
+    width: 30px; /* Smaller width */
+    height: 20px; /* Smaller height */
+  }
+
+  .right-column .form-check-label {
+    font-size: 12px; /* Adjust the font size */
+    margin-left: 5px; /* Adjust margin if needed */
+  }
+
+  .right-column .form-check-label .bi {
+    font-size: 12px; /* Adjust icon size inside the label */
+  }
+
+  .lightMode label.form-check-label {
+    margin-left: -35px !important;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,100 @@
+/* Add dark mode specific styles below */
+
+.darkMode {
+  background: #282d3a;
+  color: #fff;
+  min-height: 100%;
+}
+
+.darkMode .btn {
+  color: #ffffff;
+}
+
+.darkMode canvas {
+  background-color: #2f3442;
+}
+
+.darkMode .border-top {
+  border-color: var(--secondary-color) !important;
+}
+
+.darkMode .card,
+.darkMode .card-header,
+.darkMode .form-control {
+  background-color: #2f3442;
+  color: #fff;
+}
+
+.darkMode .nav-link,
+.darkMode .nav-link:hover {
+  color: #fff;
+}
+
+.darkMode .navbar {
+  background-color: #2f3443;
+  opacity: 1;
+}
+
+.darkMode .navbar-brand {
+  color: #fff;
+}
+
+.darkMode .offcanvas-body {
+  background-color: #282d3a;
+  color: #bebebe;
+}
+
+.darkMode .offcanvas-body a {
+  color: #fff;
+}
+
+.darkMode .offcanvas-body li {
+  border-color: #343a48;
+}
+
+.darkMode .table > :not(caption) > * > * {
+  background-color: #2f3442;
+  border-width: 0;
+  color: #fff;
+}
+
+.darkMode .table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: #3d4354;
+}
+
+.darkMode .tab-content .inv:not(:last-child) {
+  border-right: 1px solid var(--secondary-color);
+}
+
+.darkMode .tab-content > .active {
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.darkMode .text-danger {
+  color: #ff5262;
+}
+
+.darkMode .text-muted {
+  color: #fff !important;
+}
+
+.darkMode .text-success {
+  color: #0ee682;
+}
+
+.darkMode input#search::placeholder {
+  color: #ffffff38;
+}
+
+.darkMode label.form-check-label {
+  margin-left: -65px;
+  margin-top: 5px;
+}
+
+input#darkModeSwitch {
+  box-shadow: none;
+  height: 25px;
+  outline: none;
+  width: 45px;
+}

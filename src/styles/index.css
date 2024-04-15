@@ -1,0 +1,179 @@
+/* Add common styles here that are used in both light and dark mode */
+:root {
+  --default-size: 20px;
+  --primary-color: #282d3a;
+  --secondary-color: #3d4354;
+}
+
+.app-container {
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bg-primary-color {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-primary-color:hover {
+  opacity: 0.9;
+}
+
+.bg-secondary-color {
+  background-color: var(--secondary-color) !important;
+}
+
+.border-1 {
+  border: 2px solid var(--primary-color);
+}
+
+.border-1 h2 {
+  height: max-content;
+  margin-top: -35px;
+}
+
+.card-body img {
+  border: 1px solid var(--secondary-color);
+}
+
+.cardContainer {
+  border-bottom: 1px solid;
+}
+
+.caption {
+  box-shadow: 0px 1px 5px var(--primary-color);
+  transition: 1s;
+}
+
+.common-bg-primary-color {
+  background: #3a4050;
+}
+
+.canvas {
+  border-radius: 3px;
+  height: auto !important;
+  margin: 0.5rem 0;
+  padding: 15px;
+  width: 100% !important;
+}
+
+.darkMode .dark-logo,
+.lightMode .light-logo {
+  display: none;
+}
+
+.form-check-input:checked {
+  background-color: #2f3442;
+  border-color: #ccc;
+}
+
+.header-logo {
+  margin-bottom: -30px;
+  margin-top: -30px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* allow default scrolling */
+}
+
+.nav-link {
+  border-radius: 0;
+  color: #000;
+}
+
+.nav-link.active {
+  background-color: #2f3443 !important;
+  border-color: #0475a8 !important;
+  color: #fff !important;
+}
+
+.nav-link:not(.active):hover {
+  border-color: transparent !important;
+  color: #000;
+  opacity: 0.8;
+}
+
+.nav-tabs {
+  border: 0;
+  margin: auto;
+}
+
+.navbar {
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center content inside container */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar-brand img {
+  margin-bottom: -30px;
+  margin-top: -30px;
+}
+
+.offcanvas.offcanvas-start {
+  max-width: 145px;
+  text-align: center;
+}
+
+.offcanvas-body {
+  list-style: none;
+}
+
+.offcanvas-body li {
+  border-bottom: 1px solid #464646;
+  padding: 1rem 0;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.reverse-col-mobile > .row {
+  flex-direction: column-reverse;
+}
+
+.searchForm {
+  max-width: 700px;
+}
+
+.searchForm h2 {
+  line-height: 30px;
+}
+
+.table > :not(caption) > * > * {
+  font-size: 14px;
+}
+
+.tab-content > .active {
+  background-color: #f2f2f2;
+  border: 1px solid #e4e4e4;
+  box-shadow: 0 8px 32px 0 rgb(31 88 135 / 10%);
+}
+
+.tab-content .inv:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+.tab-content .inv {
+  border-width: 0 !important;
+}
+
+@media (max-width: 1200px) {
+  .nav-tabs .nav-link,
+  .tab-content {
+    font-size: smaller;
+  }
+
+  .reverse-col-mobile > .row {
+    flex-direction: column-reverse;
+  }
+
+  .searchForm h2 {
+    line-height: inherit;
+    width: 100%;
+  }
+}

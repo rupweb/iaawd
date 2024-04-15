@@ -1,0 +1,23 @@
+.h1 {
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.fact-table-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fact-table {
+    /* Style your table */
+    width: 80%;
+  }
+  
+  .media-display {
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Set the height to viewport height */
+    overflow-y: auto; /* Add scroll if content is longer than viewport */
+    width: 50%;
+  }
+  

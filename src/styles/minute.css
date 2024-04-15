@@ -1,0 +1,37 @@
+.justified-text {
+    text-align: left;
+    text-justify: inter-word;
+    word-wrap: break-word; /* Ensures long words don't overflow */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px; /* Default size */
+}
+
+.img-text {
+    color: green;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100px;
+    max-height: 200px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.math-equation {
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 1200px) {
+    .justified-text {
+        font-size: 12px;
+    }
+}

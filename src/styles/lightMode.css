@@ -1,0 +1,53 @@
+/* Add light mode specific styles below */
+
+.lightMode .bi.bi-list {
+  color: var(--primary-color);
+}
+
+.lightMode .form-control {
+  border-color: #2f344240;
+}
+
+.lightMode input#search::placeholder {
+  color: #ccc;
+}
+
+.lightMode .navbar {
+  background-color: #f2f2f2;
+  box-shadow: 0 8px 32px 0 rgb(31 88 135 / 10%);
+  border-bottom: 1px solid #ddd;
+}
+
+.lightMode label.form-check-label {
+  margin-left: -25px;
+  margin-top: 5px;
+}
+
+.lightMode .offcanvas-body {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.lightMode .offcanvas-body a {
+  color: #000;
+}
+
+.lightMode .table > :not(caption) > * > * {
+  color: #000;
+}
+
+.lightMode .table-striped {
+  border: 1px solid #eee;
+}
+
+.lightMode .text-danger {
+  color: #ff5262;
+}
+
+.lightMode .text-success {
+  color: #0ee682;
+}
+
+.lightMode #searchBtn:hover {
+  color: #000;
+}
