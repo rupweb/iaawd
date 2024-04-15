@@ -14,7 +14,7 @@ function Footer() {
             >
                 Please sign petition here
             </a>
-            <span className="text-muted">© 2024 Rupert St John Webster</span>
+            <span className="text-muted">© 2024 IAAWD</span>
         </footer>
     );
 }
