@@ -48,15 +48,6 @@ const ContactPage = () => {
                     <p>
                         Email: <a href="mailto:rupert@webstersystems.co.uk">rupert@webstersystems.co.uk</a>
                     </p>
-                    <p>
-                        CV: <a href={"/RupertStJohnWebster.pdf"} target="_blank" rel="noopener noreferrer">Rupert St John Webster</a>
-                    </p>
-                    <p>
-                        GitHub: <a href="https://github.com/rupweb" target="_blank">rupweb</a>
-                    </p>
-                    <p>
-                        LinkedIn: <a href="https://www.linkedin.com/in/rupertstjw" target="_blank">rupertstjw</a>
-                    </p>
 
                     <br/>
                     <form id="theForm" onSubmit={handleSubmit}>
