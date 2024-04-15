@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { addFormData } from '../js/form.js'; 
 import { fetchData } from '../js/s3.js';
 import LayoutContainer from './Container.jsx';
+import '../styles/minute.css'; 
 import '../styles/contact.css'; 
 
 const ContactPage = () => {
@@ -44,12 +45,12 @@ const ContactPage = () => {
         <LayoutContainer>
             <div>
                 <div className="contact">
-                    <h1>Contact Me</h1>
+                    <h1>Contact IAAWD</h1>
                     <p>
                         Email: <a href="mailto:rupert@webstersystems.co.uk">rupert@webstersystems.co.uk</a>
                     </p>
                     <p>Did you ever work so much as 1 day in agriculture?</p>
-                    <p>Did you ever suffer a disability?</p>
+                    <p>Do or have you suffered any serious disability?</p>
                     <br/>
                     <form id="theForm" onSubmit={handleSubmit}>
                         <div>

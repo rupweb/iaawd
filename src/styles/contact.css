@@ -22,6 +22,7 @@ p {
 }
 
 .contact h1, .contact p, .contact form {
+  color: #000; /* Ensuring text is black in light mode */
   text-align: left; /* Align text to the left */
 }
 
