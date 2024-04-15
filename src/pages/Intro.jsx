@@ -9,7 +9,7 @@ const Intro = () => {
         <div className="justified-text">
             <h5>IAAWD charitable purposes</h5>
             <p>
-                To advance the protection and welfare of agricultural workers with disabilities for the public benefit by:
+                To advance the protection and welfare of agricultural workers with disabilities and their family members for the public benefit by:
                 <ul>
                     <li>Advocating for equitable legal and property rights in agricultural settings.</li>
                     <li>Providing support and resources to disabled agricultural workers and their families to ensure their rights and welfare are upheld.</li>
@@ -17,7 +17,7 @@ const Intro = () => {
                 </ul>
             </p>
             <p>
-                To promote the relief of disabled agricultural workers through:
+                To promote the relief of disabled agricultural workers and their family members through:
                 <ul>
                     <li>Legal advocacy to challenge discriminatory practices and policies.</li>
                     <li>Supporting agricultural workers in navigating legal systems regarding inheritance, property rights, and employment discrimination.</li>
