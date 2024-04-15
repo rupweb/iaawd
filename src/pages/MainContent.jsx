@@ -4,7 +4,7 @@ import Intro from './Intro';
 import '../styles/maincontent.css';
 
 const MainContent = () => {
-  const petitionURL = "https://petition.parliament.uk/petitions/658517/sponsors/new?token=efG-NjPEtl_01bUGP4KH";
+  const petitionURL = "https://petition.parliament.uk/petitions/660652/sponsors/new?token=hZuO_OZnPgrugYjO67EE";
 
   return (
     <LayoutContainer>
