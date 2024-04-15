@@ -49,7 +49,7 @@ const ContactPage = () => {
                     <p>
                         Email: <a href="mailto:rupert@webstersystems.co.uk">rupert@webstersystems.co.uk</a>
                     </p>
-                    <p>Did you ever work so much as 1 full day in agriculture?</p>
+                    <p>Did you ever do as much as 1 day's work in agriculture?</p>
                     <p>Do or have you suffered any serious disability?</p>
                     <br/>
                     <form id="theForm" onSubmit={handleSubmit}>
