@@ -8,6 +8,7 @@ const OffCanvas = () => {
                 <span type="button" data-bs-dismiss="offcanvas" aria-label="Close" className="w-100"><i className="bi bi-x-lg float-end"></i></span>
                 <ul className="p-0 list-inline">
                     <li><NavLink to="/" className="text-decoration-none" role="button"><i className="bi bi-speedometer2 d-block"></i>Introduction</NavLink></li>
+                    <li><NavLink to="/governance" className="text-decoration-none" role="button"><i className="bi bi-speedometer2 d-block"></i>Governance</NavLink></li>
                     <li><NavLink to="/contact" className="text-decoration-none" role="button"><i className="bi bi-envelope d-block"></i>Get in Touch</NavLink></li>
                 </ul>
             </div>
