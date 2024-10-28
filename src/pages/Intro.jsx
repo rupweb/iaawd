@@ -3,7 +3,7 @@ import openPopup from '../services/popupDisplay';
 import '../styles/minute.css';
 
 const Intro = () => {
-    const petitionURL = "https://petition.parliament.uk/petitions/660652/sponsors/new?token=hZuO_OZnPgrugYjO67EE";
+    const petitionURL = "https://petition1.netlify.app/";
 
     return (
         <div className="justified-text">
@@ -25,7 +25,7 @@ const Intro = () => {
                 </ul>
             </p>
             <p> 
-                Please <a href={petitionURL} target="_blank" rel="noopener noreferrer">sign a petition</a> for a debate.
+                To create debates in Parliament about <a href={petitionURL} target="_blank" rel="noopener noreferrer">situations like this</a>.
             </p>
         </div>
     );

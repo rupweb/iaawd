@@ -25,6 +25,7 @@
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1",
+    "rights": "file:",
     "swiper": "^11.0.7",
     "whatwg-fetch": "^3.6.20"
   },
