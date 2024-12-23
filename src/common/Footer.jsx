@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/footer.css';
 
 function Footer() {
-    const petitionURL = "https://petition.parliament.uk/petitions/660652/sponsors/new?token=hZuO_OZnPgrugYjO67EE";
+    const petitionURL = "https://petition.parliament.uk/archived/petitions/660652";
 
     return (
         <footer className="border-top py-3 w-100 mt-5 text-center">
