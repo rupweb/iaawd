@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Membership enquiries | IAAWD";
+const description =
+  "Membership or sign-up enquiries for IAAWD should be made through the contact page.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path="/signup"
+  noindex={true}
+  breadcrumbs={[{ label: "Membership enquiries" }]}
+>
+  <section class="shell">
+    <article class="page-panel">
+      <p class="eyebrow">Non-indexed page</p>
+      <h1>Membership enquiries</h1>
+      <p class="lead">
+        This route is retained for continuity, but it is not intended to compete in
+        search results.
+      </p>
+      <p>
+        If you want to make contact about membership or involvement, please use the
+        main contact page so the site keeps a single clear route for enquiries.
+      </p>
+      <p><a class="button-link" href="/contact">Go to contact</a></p>
+    </article>
+  </section>
+</BaseLayout>

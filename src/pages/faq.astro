@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../config/site.js";
+
+const title = "IAAWD FAQ | Disabled agricultural workers information";
+const description =
+  "Find answers about IAAWD, who it serves, governance, contact details, and where to find public documents and support information.";
+
+const faqItems = [
+  {
+    question: "What is IAAWD?",
+    answer:
+      "IAAWD is the International Association for Agricultural Workers with Disabilities. Its governing document describes it as a non-profit entity dedicated to the welfare of agricultural workers with disabilities.",
+  },
+  {
+    question: "Who does IAAWD serve?",
+    answer:
+      "The site is focused on agricultural workers with disabilities and their family members, alongside supporters, researchers, and policymakers who need governance and rights information.",
+  },
+  {
+    question: "What does the organisation aim to do?",
+    answer:
+      "Its published purposes include advocacy for equitable legal and property rights, support and resources for disabled agricultural workers and their families, and public education about their challenges and rights.",
+  },
+  {
+    question: "Where can I read the governing document?",
+    answer:
+      "The governing document is available on the governance page and on the resources page as a downloadable PDF.",
+  },
+  {
+    question: "How can I contact IAAWD?",
+    answer: `You can use the contact page or email ${SITE.email} directly.`,
+  },
+];
+
+const schemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path="/faq"
+  breadcrumbs={[{ label: "FAQ" }]}
+  schemas={schemas}
+>
+  <section class="page-panel shell">
+    <p class="eyebrow">Frequently asked questions</p>
+    <h1>Answers about IAAWD, governance, and contact routes</h1>
+    <p class="lead">
+      This page gives a direct introduction to IAAWD for visitors who want quick,
+      source-grounded answers before reading the full mission, governance, or
+      resource pages.
+    </p>
+  </section>
+
+  <section class="faq-list shell">
+    {
+      faqItems.map((item) => (
+        <article class="faq-item">
+          <h2>{item.question}</h2>
+          <p>{item.answer}</p>
+        </article>
+      ))
+    }
+  </section>
+</BaseLayout>

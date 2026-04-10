@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "About IAAWD | Agricultural disability advocacy";
+const description =
+  "Learn what IAAWD is, who it serves, and why disabled agricultural workers and their families need visible support and advocacy.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path="/about"
+  breadcrumbs={[{ label: "About" }]}
+>
+  <section class="content-grid">
+    <article class="page-panel">
+      <p class="eyebrow">About the organisation</p>
+      <h1>What IAAWD is and why the organisation exists</h1>
+      <p class="lead">
+        IAAWD stands for the International Association for Agricultural Workers with
+        Disabilities. The organisation&apos;s governing document describes it as a
+        non-profit entity dedicated to the welfare of agricultural workers with
+        disabilities.
+      </p>
+      <p>
+        The focus of the site is mission-first. It explains the need for support,
+        advocacy, governance, and public education in agricultural settings where
+        disability, rural work, family impact, and legal or property-rights issues
+        can overlap.
+      </p>
+      <p>
+        IAAWD also publishes supporting documents and background material so visitors
+        can read the governing document, understand the organisation&apos;s stated
+        priorities, and make direct contact where relevant.
+      </p>
+    </article>
+
+    <aside class="notice-card">
+      <h2>Audience</h2>
+      <ul class="bullet-list">
+        <li>Disabled agricultural workers seeking information or support routes.</li>
+        <li>Family members affected by disability in agricultural settings.</li>
+        <li>Advocates, lawyers, policymakers, and researchers.</li>
+        <li>Supporters who want governance and mission clarity.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="panel-grid">
+    <article class="page-panel">
+      <h2>Core themes</h2>
+      <ul class="bullet-list">
+        <li>Protection and welfare for agricultural workers with disabilities.</li>
+        <li>Support for family members affected by disability and rural legal issues.</li>
+        <li>Public education on rights, barriers, and agricultural disability needs.</li>
+        <li>Governance, accountability, and access to supporting documents.</li>
+      </ul>
+    </article>
+
+    <article class="cta-panel">
+      <h2>Read next</h2>
+      <p>
+        Continue to the mission page for the governing purposes in plain English, or
+        move to rights and support for the main advocacy topics raised by the site.
+      </p>
+      <p class="mini-links">
+        <a href="/mission">Mission</a>
+        <a href="/rights-and-support">Rights &amp; support</a>
+        <a href="/resources">Resources</a>
+      </p>
+    </article>
+  </section>
+</BaseLayout>

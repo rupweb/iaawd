@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Thank you | IAAWD contact";
+const description =
+  "Thank you for contacting IAAWD. Your message has been submitted.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path="/contact/thanks"
+  noindex={true}
+  breadcrumbs={[{ href: "/contact", label: "Contact" }, { label: "Thank you" }]}
+>
+  <section class="shell">
+    <article class="page-panel">
+      <p class="eyebrow">Message sent</p>
+      <h1>Thank you for contacting IAAWD</h1>
+      <p class="lead">
+        Your message has been submitted. Use the navigation to continue browsing the
+        mission, governance, rights, or resources pages.
+      </p>
+      <p class="mini-links">
+        <a href="/">Home</a>
+        <a href="/resources">Resources</a>
+        <a href="/governance">Governance</a>
+      </p>
+    </article>
+  </section>
+</BaseLayout>
