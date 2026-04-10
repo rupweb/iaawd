@@ -29,32 +29,65 @@ const schemas = [
 
 <BaseLayout title={title} description={description} path="/" schemas={schemas}>
   <section class="page-hero">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Agricultural disability rights</p>
-        <h1>Support, rights, and governance for disabled agricultural workers</h1>
-        <p class="lead">
-          The International Association for Agricultural Workers with Disabilities
-          publishes information about agricultural disability rights, family impact,
-          governance, and advocacy in agricultural settings.
-        </p>
-        <p>
-          The organisation&apos;s governing document describes public-benefit purposes that
-          include protecting welfare, supporting disabled agricultural workers and
-          their family members, promoting legal and property-rights advocacy, and
-          educating the public and policymakers.
-        </p>
-        <div class="hero-actions">
-          <a class="button-link" href="/mission">Explore the mission</a>
-          <a class="button-link secondary" href="/contact">Contact IAAWD</a>
-        </div>
-        <div class="mini-links">
-          <a href="/governance">Read governance summary</a>
-          <a href="/resources">Open documents and resources</a>
-          <a href={SITE.petitionUrl}>Related petition site</a>
-        </div>
+    <div class="hero-copy">
+      <p class="eyebrow">Agricultural disability rights</p>
+      <h1>Support, rights, and governance for disabled agricultural workers</h1>
+      <p class="lead">
+        The International Association for Agricultural Workers with Disabilities
+        publishes information about agricultural disability rights, family impact,
+        governance, and advocacy in agricultural settings.
+      </p>
+      <p>
+        The organisation&apos;s governing document describes public-benefit purposes that
+        include protecting welfare, supporting disabled agricultural workers and
+        their family members, promoting legal and property-rights advocacy, and
+        educating the public and policymakers.
+      </p>
+      <div class="hero-actions">
+        <a class="button-link" href="/mission">Explore the mission</a>
+        <a class="button-link secondary" href="/contact">Contact IAAWD</a>
       </div>
-      <div class="hero-visual" aria-hidden="true"></div>
+      <div class="mini-links">
+        <a href="/governance">Read governance summary</a>
+        <a href="/resources">Open documents and resources</a>
+        <a href={SITE.petitionUrl}>Related petition site</a>
+      </div>
+    </div>
+
+    <div class="hero-gallery" aria-label="IAAWD image gallery">
+      <div class="hero-gallery-rail">
+        <img
+          src="/images/taunton trees 1.gif"
+          alt="Taunton Trees image from the IAAWD archive"
+          loading="eager"
+        />
+        <img
+          src="/images/taunton trees 2.gif"
+          alt="Second Taunton Trees image from the IAAWD archive"
+          loading="eager"
+        />
+      </div>
+
+      <figure class="hero-gallery-main">
+        <img
+          src={SITE.imagePath}
+          alt="Group photograph showing wheelchair users and other attendees gathered outdoors"
+          loading="eager"
+        />
+      </figure>
+
+      <div class="hero-gallery-rail">
+        <img
+          src="/images/taunton trees 3.gif"
+          alt="Third Taunton Trees image from the IAAWD archive"
+          loading="eager"
+        />
+        <img
+          src="/images/taunton trees 4.gif"
+          alt="Fourth Taunton Trees image from the IAAWD archive"
+          loading="eager"
+        />
+      </div>
     </div>
   </section>
 

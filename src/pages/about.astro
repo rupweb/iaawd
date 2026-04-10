@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { ABOUT_AUDIENCE, ABOUT_LEAD } from "../data/siteContent.js";
 
 const title = "About IAAWD | Agricultural disability advocacy";
 const description =
@@ -16,12 +17,7 @@ const description =
     <article class="page-panel">
       <p class="eyebrow">About the organisation</p>
       <h1>What IAAWD is and why the organisation exists</h1>
-      <p class="lead">
-        IAAWD stands for the International Association for Agricultural Workers with
-        Disabilities. The organisation&apos;s governing document describes it as a
-        non-profit entity dedicated to the welfare of agricultural workers with
-        disabilities.
-      </p>
+      <p class="lead">{ABOUT_LEAD}</p>
       <p>
         The focus of the site is mission-first. It explains the need for support,
         advocacy, governance, and public education in agricultural settings where
@@ -38,10 +34,7 @@ const description =
     <aside class="notice-card">
       <h2>Audience</h2>
       <ul class="bullet-list">
-        <li>Disabled agricultural workers seeking information or support routes.</li>
-        <li>Family members affected by disability in agricultural settings.</li>
-        <li>Advocates, lawyers, policymakers, and researchers.</li>
-        <li>Supporters who want governance and mission clarity.</li>
+        {ABOUT_AUDIENCE.map((item) => <li>{item}</li>)}
       </ul>
     </aside>
   </section>

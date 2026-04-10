@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE } from "../config/site.js";
+import { RESOURCES_LEAD } from "../data/siteContent.js";
 
 const title = "IAAWD resources | Governance documents and links";
 const description =
@@ -16,10 +17,7 @@ const description =
   <section class="page-panel shell">
     <p class="eyebrow">Resources</p>
     <h1>Documents, contact routes, and supporting links</h1>
-    <p class="lead">
-      This page gathers the main public materials published or referenced by IAAWD so
-      visitors can reach governance, contact, and supporting information quickly.
-    </p>
+    <p class="lead">{RESOURCES_LEAD}</p>
   </section>
 
   <section class="resource-grid">
