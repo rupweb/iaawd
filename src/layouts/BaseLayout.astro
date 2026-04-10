@@ -1,7 +1,6 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Breadcrumbs from "../components/Breadcrumbs.astro";
 import { SITE } from "../config/site.js";
 import "../styles/site.css";
 
@@ -77,7 +76,6 @@ const allSchemas = breadcrumbSchema ? [...schemas, breadcrumbSchema] : schemas;
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <Header currentPath={path} />
-    <Breadcrumbs items={breadcrumbItems} />
     <main id="main">
       <slot />
     </main>
