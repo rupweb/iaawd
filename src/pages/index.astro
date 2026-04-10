@@ -1,0 +1,121 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { PAGE_LINKS, SITE } from "../config/site.js";
+
+const title = "IAAWD | Rights and support for disabled agricultural workers";
+const description =
+  "IAAWD supports disabled agricultural workers and their families through advocacy, governance, public education, and access to key resources.";
+
+const schemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE.name,
+    alternateName: SITE.shortName,
+    url: `${SITE.url}/`,
+    email: SITE.email,
+    logo: `${SITE.url}${SITE.logoPath}`,
+    description: SITE.description,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE.name,
+    url: `${SITE.url}/`,
+    description,
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path="/" schemas={schemas}>
+  <section class="page-hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Agricultural disability rights</p>
+        <h1>Support, rights, and governance for disabled agricultural workers</h1>
+        <p class="lead">
+          The International Association for Agricultural Workers with Disabilities
+          publishes information about agricultural disability rights, family impact,
+          governance, and advocacy in agricultural settings.
+        </p>
+        <p>
+          The organisation&apos;s governing document describes public-benefit purposes that
+          include protecting welfare, supporting disabled agricultural workers and
+          their family members, promoting legal and property-rights advocacy, and
+          educating the public and policymakers.
+        </p>
+        <div class="hero-actions">
+          <a class="button-link" href="/mission">Explore the mission</a>
+          <a class="button-link secondary" href="/contact">Contact IAAWD</a>
+        </div>
+        <div class="mini-links">
+          <a href="/governance">Read governance summary</a>
+          <a href="/resources">Open documents and resources</a>
+          <a href={SITE.petitionUrl}>Related petition site</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="page-panel">
+      <h2>Who the site is for</h2>
+      <p>
+        This site is for disabled agricultural workers, family members, supporters,
+        researchers, and policymakers who need a clear view of IAAWD&apos;s purpose,
+        governance, and published materials.
+      </p>
+      <div class="stat-line"><span>1</span> Disabled agricultural workers</div>
+      <div class="stat-line"><span>2</span> Family members affected by disability and rural legal issues</div>
+      <div class="stat-line"><span>3</span> People researching agricultural disability rights</div>
+      <div class="stat-line"><span>4</span> Supporters looking for governance and contact information</div>
+    </article>
+
+    <aside class="quote-card">
+      <h2>Governance signal</h2>
+      <p>
+        The governing document states that IAAWD is a non-profit entity dedicated to
+        the welfare of agricultural workers with disabilities and that it is governed
+        by trustees.
+      </p>
+      <p>
+        <a class="text-link" href={SITE.governingDocumentPath}>Download the governing document PDF</a>
+      </p>
+    </aside>
+  </section>
+
+  <section class="cards-grid">
+    {
+      PAGE_LINKS.map((link) => (
+        <article class="grid-card">
+          <h2><a href={link.href}>{link.title}</a></h2>
+          <p>{link.description}</p>
+        </article>
+      ))
+    }
+  </section>
+
+  <section class="panel-grid">
+    <article class="page-panel">
+      <h2>What the organisation publishes</h2>
+      <ul class="bullet-list">
+        <li>Mission and charitable-purpose material in plain English.</li>
+        <li>Governance information and access to the governing document.</li>
+        <li>Rights and support themes affecting disabled agricultural workers.</li>
+        <li>Public resources, petitions, and contact routes.</li>
+      </ul>
+    </article>
+
+    <article class="cta-panel">
+      <h2>Start with the key pages</h2>
+      <p>
+        For the quickest overview, read the about page, mission page, governance
+        summary, and resources section before moving into supporting material.
+      </p>
+      <p>
+        <a class="button-link" href="/about">Read about IAAWD</a>
+      </p>
+    </article>
+  </section>
+</BaseLayout>

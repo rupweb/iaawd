@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../config/site.js";
+
+const title = "IAAWD resources | Governance documents and links";
+const description =
+  "Browse IAAWD's governing document, petition background, contact route, and public resources about disabled agricultural workers and family support.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path="/resources"
+  breadcrumbs={[{ label: "Resources" }]}
+>
+  <section class="page-panel shell">
+    <p class="eyebrow">Resources</p>
+    <h1>Documents, contact routes, and supporting links</h1>
+    <p class="lead">
+      This page gathers the main public materials published or referenced by IAAWD so
+      visitors can reach governance, contact, and supporting information quickly.
+    </p>
+  </section>
+
+  <section class="resource-grid">
+    <article class="resource-card">
+      <h2>Governing document</h2>
+      <p>
+        Read the PDF that sets out IAAWD&apos;s name, purposes, powers, membership,
+        trustees, meetings, finances, and dissolution provisions.
+      </p>
+      <p><a href={SITE.governingDocumentPath}>Download the governing document</a></p>
+      <p><a href="/governance">Read the governance summary page</a></p>
+    </article>
+
+    <article class="resource-card">
+      <h2>Related petition site</h2>
+      <p>
+        The related petition site provides supporting context and public-facing
+        campaign material connected to disability and agricultural rights themes.
+      </p>
+      <p><a href={SITE.petitionUrl}>Open petition1.netlify.app</a></p>
+      <p><a href={SITE.archivedPetitionUrl}>Read the archived Parliament petition</a></p>
+    </article>
+
+    <article class="resource-card">
+      <h2>Contact IAAWD</h2>
+      <p>
+        Contact the organisation about disability, family impact, governance, public
+        materials, or related agricultural rights issues.
+      </p>
+      <p><a href="/contact">Use the contact page</a></p>
+      <p><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+    </article>
+  </section>
+
+  <section class="panel-grid">
+    <article class="page-panel">
+      <h2>How to use this page</h2>
+      <ul class="bullet-list">
+        <li>Start with governance if you need the formal organisational summary.</li>
+        <li>Use mission and rights pages for plain-English context.</li>
+        <li>Use the petition links as supporting background, not as a substitute for the main site.</li>
+      </ul>
+    </article>
+
+    <article class="cta-panel">
+      <h2>Continue browsing</h2>
+      <p class="mini-links">
+        <a href="/about">About</a>
+        <a href="/mission">Mission</a>
+        <a href="/faq">FAQ</a>
+      </p>
+    </article>
+  </section>
+</BaseLayout>

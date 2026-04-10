@@ -1,0 +1,22 @@
+---
+/** @typedef {{ href?: string, label: string }} BreadcrumbItem */
+
+/** @type {{ items?: BreadcrumbItem[] }} */
+const props = Astro.props;
+const items = props.items ?? [];
+---
+
+{
+  items.length > 0 && (
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="shell">
+        <li><a href="/">Home</a></li>
+        {items.map((item) => (
+          <li>
+            {item.href ? <a href={item.href}>{item.label}</a> : <span aria-current="page">{item.label}</span>}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )
+}

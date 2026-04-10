@@ -1,0 +1,31 @@
+---
+import { SITE } from "../config/site.js";
+---
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <h2>International Association for Agricultural Workers with Disabilities</h2>
+      <p>
+        IAAWD publishes information about disability, agricultural work, family impact,
+        governance, and legal and property-rights advocacy in agricultural settings.
+      </p>
+    </div>
+
+    <div>
+      <h2>Useful links</h2>
+      <ul class="footer-links">
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/governance">Governance</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href={SITE.petitionUrl}>Related petition site</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Contact</h2>
+      <p><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+      <p class="muted">© 2026 IAAWD</p>
+    </div>
+  </div>
+</footer>

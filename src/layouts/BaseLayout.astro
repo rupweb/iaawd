@@ -1,0 +1,92 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { SITE } from "../config/site.js";
+import "../styles/site.css";
+
+/** @typedef {{ href?: string, label: string }} BreadcrumbItem */
+/** @typedef {Record<string, unknown>} JsonLd */
+
+const {
+  title,
+  description,
+  path = "/",
+  noindex = false,
+  breadcrumbs = [],
+  schemas = [],
+} = Astro.props;
+
+const canonical = new URL(path, `${SITE.url}/`).toString();
+const socialImage = new URL(SITE.imagePath, `${SITE.url}/`).toString();
+/** @type {BreadcrumbItem[]} */
+const breadcrumbItems = breadcrumbs.map((item) => ({
+  href: item.href,
+  label: item.label,
+}));
+
+/** @type {JsonLd | null} */
+const breadcrumbSchema =
+  breadcrumbItems.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: `${SITE.url}/`,
+          },
+          ...breadcrumbItems.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 2,
+            name: item.label,
+            item: item.href ? new URL(item.href, `${SITE.url}/`).toString() : canonical,
+          })),
+        ],
+      }
+    : null;
+
+/** @type {JsonLd[]} */
+const allSchemas = breadcrumbSchema ? [...schemas, breadcrumbSchema] : schemas;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:site_name" content={SITE.name} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header currentPath={path} />
+    <Breadcrumbs items={breadcrumbItems} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+
+    {
+      allSchemas.map((schema) => (
+        <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+      ))
+    }
+  </body>
+</html>

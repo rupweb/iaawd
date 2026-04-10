@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../config/site.js";
+
+const title = "IAAWD governance | Trustees and governing document";
+const description =
+  "Read an HTML summary of IAAWD's governance structure, charitable purposes, trustee oversight, and access to the governing document PDF.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path="/governance"
+  breadcrumbs={[{ label: "Governance" }]}
+>
+  <section class="content-grid">
+    <article class="page-panel">
+      <p class="eyebrow">Governance</p>
+      <h1>Trustees, purposes, meetings, and the governing document</h1>
+      <p class="lead">
+        The governing document presents IAAWD as a non-profit entity dedicated to the
+        welfare of agricultural workers with disabilities.
+      </p>
+      <ul class="bullet-list">
+        <li>The organisation is governed by a board of trustees.</li>
+        <li>Membership is open to people and organisations that support the mission.</li>
+        <li>Meetings include trustee meetings and an annual general meeting.</li>
+        <li>Funds are to be used for the organisation&apos;s stated purposes.</li>
+        <li>Amendments and dissolution require member votes under the document.</li>
+      </ul>
+      <p>
+        This HTML summary exists so visitors and search engines can understand the
+        governance framework without needing to open a PDF first.
+      </p>
+      <p>
+        <a class="button-link" href={SITE.governingDocumentPath}>Download the governing document PDF</a>
+      </p>
+    </article>
+
+    <aside class="quote-card">
+      <h2>Why this page matters</h2>
+      <p>
+        Trust and transparency matter for both users and search engines. A clear
+        governance summary supports credibility, accessibility, and better indexing.
+      </p>
+    </aside>
+  </section>
+
+  <section class="panel-grid">
+    <article class="page-panel">
+      <h2>Governance topics covered by the document</h2>
+      <ul class="bullet-list">
+        <li>Name and establishment.</li>
+        <li>Charitable purposes and powers.</li>
+        <li>Membership and trustees.</li>
+        <li>Meetings and financial management.</li>
+        <li>Amendment and dissolution provisions.</li>
+      </ul>
+    </article>
+
+    <article class="cta-panel">
+      <h2>Next steps</h2>
+      <p class="mini-links">
+        <a href="/mission">Mission</a>
+        <a href="/resources">Resources</a>
+        <a href="/contact">Contact</a>
+      </p>
+    </article>
+  </section>
+</BaseLayout>

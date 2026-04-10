@@ -1,59 +1,83 @@
-# International Association for Agricultural Workers with Disabilities (IAAWD)
+# International Association for Agricultural Workers with Disabilities
 
-![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
+## Overview
 
-## Description
+This repository builds the public IAAWD website at
+`https://iaawd.netlify.app/`.
 
-It's about a legal case in the UK on the above
+The site is now structured as a prerendered static site so search engines can
+read meaningful HTML on every main public route without relying on JavaScript.
 
-## Table of Contents
+## Routes
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+- `/`
+- `/about`
+- `/mission`
+- `/rights-and-support`
+- `/resources`
+- `/faq`
+- `/governance`
+- `/contact`
 
-## Installation
+Non-indexed utility routes:
 
-`npm install`
-`npm start`
+- `/signup`
+- `/contact/thanks`
+- `/404`
 
-Then install to Netlify
+## Development
 
-## Usage
+Install dependencies:
 
-It's a website. It has basic intro page, a 5 minute page, a 10 minute page and an evidence page.
-The evidence page uses jpg and mp4 to show evidence for the treatment.
+```bash
+npm install
+```
 
-## License
+Run the local development server:
 
-This project is licensed under the Apache License.
+```bash
+npm run dev
+```
 
-## Contributing
+Build the static site:
 
-Shared Repository
+```bash
+npm run build
+```
 
-## Tests
+Run the validation check:
 
-jest test
+```bash
+npm run test
+```
 
-## Pdf to jpg
+## SEO Surface
 
-Use the following to convert pdf to jpg
-`node src/js/generatePdfToJpg.js`
-This converts all pdf in the public/items directory to public/output directory as jpg
+The repo includes:
 
-Likewise `node src/js/generateFacts.js`
-This creates the facts arrays out of all the jpg in the public/items directory
+- prerendered public HTML pages
+- route-specific titles and meta descriptions
+- canonical tags
+- Open Graph and Twitter metadata
+- JSON-LD structured data
+- `robots.txt`
+- `sitemap.xml`
+- Netlify headers
+- a custom 404 page
 
-## Mov to mp4
+Operational follow-up for Search Console, Bing Webmaster Tools, and Netlify is
+documented in `SEO-OPERATIONS.md`.
 
-Use the following to convert mov to mp4
-`ffmpeg -i input.mp4 -c:v libx264 -c:a aac output.mp4`
+## Netlify
 
-## Questions
+`netlify.toml` is configured to:
 
-For any questions, please contact me at [rupert@webstersystems.co.uk](mailto:rupert@webstersystems.co.uk) or visit my [GitHub profile](https://github.com/rupweb).
+- run `npm run build`
+- publish `dist`
+- use Node 20
+
+## Contact
+
+For questions about the project or the organisation, contact
+[rupert@webstersystems.co.uk](mailto:rupert@webstersystems.co.uk).
   

@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '21'
+        node-version: '20'
 
     - name: Install dependencies
       run: npm install
@@ -24,18 +24,18 @@ jobs:
     - name: Run tests
       run: npm run test --passWithNoTests
 
-    - name: Build React App
+    - name: Build static site
       run: npm run build
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
         name: build-artifact
-        path: build/
+        path: dist/
         retention-days: 1
 
     - name: List output files
-      run: ls -l build/  
+      run: ls -l dist/
 
   deploy:
     needs: build-and-test
@@ -49,7 +49,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: build-artifact
-        path: build/
+        path: dist/
 
     - name: Install Netlify CLI
       run: npm install netlify-cli -g
@@ -58,4 +58,4 @@ jobs:
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      run: netlify deploy --prod --dir=build
+      run: netlify deploy --prod --dir=dist

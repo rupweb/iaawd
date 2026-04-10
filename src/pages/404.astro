@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Page not found | IAAWD";
+const description =
+  "The page you requested could not be found. Continue to IAAWD's main pages for governance, rights, resources, and contact information.";
+---
+
+<BaseLayout title={title} description={description} path="/404" noindex={true}>
+  <section class="shell">
+    <article class="page-panel">
+      <p class="eyebrow">404</p>
+      <h1>Page not found</h1>
+      <p class="lead">
+        The page you requested does not exist or has moved. Use one of the main pages
+        below to continue.
+      </p>
+      <p class="mini-links">
+        <a href="/">Home</a>
+        <a href="/resources">Resources</a>
+        <a href="/governance">Governance</a>
+        <a href="/contact">Contact</a>
+      </p>
+    </article>
+  </section>
+</BaseLayout>

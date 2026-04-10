@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../config/site.js";
+
+const title = "Contact IAAWD | Agricultural disability support enquiries";
+const description =
+  "Contact IAAWD about disability, agricultural work, family impact, governance, public materials, and related support or advocacy enquiries.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path="/contact"
+  breadcrumbs={[{ label: "Contact" }]}
+>
+  <section class="contact-grid">
+    <article class="page-panel">
+      <p class="eyebrow">Contact</p>
+      <h1>Contact IAAWD</h1>
+      <p class="lead">
+        Use this page for enquiries about disabled agricultural workers, family
+        impact, governance, mission, public materials, or related rights issues.
+      </p>
+      <ul class="bullet-list">
+        <li>Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+        <li>Primary site: <a href={`${SITE.url}/`}>{SITE.url}</a></li>
+        <li>Governance summary: <a href="/governance">/governance</a></li>
+      </ul>
+    </article>
+
+    <aside class="contact-card">
+      <h2>Suggested topics</h2>
+      <ul class="bullet-list">
+        <li>Disability and agricultural work.</li>
+        <li>Family welfare and rural legal issues.</li>
+        <li>Governance or published documents.</li>
+        <li>Support, advocacy, or collaboration enquiries.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="shell">
+    <article class="page-panel">
+      <h2>Send a message</h2>
+      <form
+        class="contact-form"
+        name="iaawd-contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/contact/thanks"
+      >
+        <input type="hidden" name="form-name" value="iaawd-contact" />
+        <p hidden>
+          <label>
+            Do not fill this out if you are human:
+            <input name="bot-field" />
+          </label>
+        </p>
+
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" required></textarea>
+        </label>
+
+        <button class="button-link" type="submit">Send enquiry</button>
+      </form>
+    </article>
+  </section>
+</BaseLayout>
