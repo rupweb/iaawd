@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE } from "../config/site.js";
+import { GOVERNANCE_LEAD, GOVERNANCE_POINTS } from "../data/siteContent.js";
 
 const title = "IAAWD governance | Trustees and governing document";
 const description =
@@ -17,16 +18,9 @@ const description =
     <article class="page-panel">
       <p class="eyebrow">Governance</p>
       <h1>Trustees, purposes, meetings, and the governing document</h1>
-      <p class="lead">
-        The governing document presents IAAWD as a non-profit entity dedicated to the
-        welfare of agricultural workers with disabilities.
-      </p>
+      <p class="lead">{GOVERNANCE_LEAD}</p>
       <ul class="bullet-list">
-        <li>The organisation is governed by a board of trustees.</li>
-        <li>Membership is open to people and organisations that support the mission.</li>
-        <li>Meetings include trustee meetings and an annual general meeting.</li>
-        <li>Funds are to be used for the organisation&apos;s stated purposes.</li>
-        <li>Amendments and dissolution require member votes under the document.</li>
+        {GOVERNANCE_POINTS.map((item) => <li>{item}</li>)}
       </ul>
       <p>
         This HTML summary exists so visitors and search engines can understand the

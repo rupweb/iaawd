@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { MISSION_LEAD, MISSION_POINTS } from "../data/siteContent.js";
 
 const title = "IAAWD mission | Support for disabled farm workers";
 const description =
@@ -16,16 +17,9 @@ const description =
     <article class="page-panel">
       <p class="eyebrow">Mission and purposes</p>
       <h1>IAAWD&apos;s mission in plain English</h1>
-      <p class="lead">
-        The governing document describes a public-benefit mission centred on disabled
-        agricultural workers and their family members.
-      </p>
+      <p class="lead">{MISSION_LEAD}</p>
       <ul class="bullet-list">
-        <li>Advance protection and welfare in agricultural settings.</li>
-        <li>Support disabled agricultural workers and their families.</li>
-        <li>Promote equitable legal and property rights.</li>
-        <li>Encourage legislative change where rights need stronger protection.</li>
-        <li>Educate the public and policymakers about disability-related barriers.</li>
+        {MISSION_POINTS.map((item) => <li>{item}</li>)}
       </ul>
       <p>
         This mission framing matters for SEO as well as for visitors. Searchers need
